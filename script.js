@@ -51,11 +51,12 @@ function handleSubmit(e) {
     e.preventDefault();
     if(validate()){
         if(dayI.value > day) {
-            day =+ dates[month - 1];
-            month =- 1;
+            day += dates[month - 1];
+            month += 1;
         }
         if(monthI.value > month){
-            year =+ 1;
+            month += 12;
+            year -= 1;
         }
 
         const d = day - dayI.value;
