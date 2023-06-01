@@ -51,8 +51,8 @@ function handleSubmit(e) {
     e.preventDefault();
     if(validate()){
         if(dayI.value > day) {
-            day += dates[month - 1];
-            month += 1;
+            day += dates[month + 1];
+            month;
         }
         if(monthI.value > month){
             month += 12;
